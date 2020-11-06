@@ -57,6 +57,15 @@ def remove_customer_cash(input_list_of_dict, input_cash):
     
     input_list_of_dict["cash"] = new_cash
 
+# function to retrieve customers pet count
+
+def get_customer_pet_count(input_list_of_dict):
+    
+    if input_list_of_dict["pets"] == []:
+        return 0
+    else:
+        return input_list_of_dict["pets"]
+
     
 
 
