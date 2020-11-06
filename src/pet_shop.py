@@ -38,9 +38,9 @@ def increase_pets_sold(input_dict, increment):
 
 #function to get stock count 
 
-# def get_stock_count(input_dict):
-#     for pet in input_dict:
-#         return len(input_dict["pets"])
+def get_stock_count(input_dict_of_list):
+    return len(input_dict_of_list["pets"])
+    
 
 
 #function to get customer cash
@@ -65,6 +65,16 @@ def get_customer_pet_count(input_list_of_dict):
         return 0
     else:
         return input_list_of_dict["pets"]
+
+# function to add a number of pets to a customer
+
+# def add_pet_to_customer(input_list_of_dict, pet_num):
+
+#     for pet in input_list_of_dict["pets"]:
+#         if pet_num > 0:
+#             new_pets = get_customer_pet_count(input_list_of_dict) + pet_num
+        
+#         input_list_of_dict["pets"] = new_pets
 
     
 
