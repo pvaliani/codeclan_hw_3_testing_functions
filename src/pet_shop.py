@@ -26,17 +26,26 @@ def add_or_remove_cash(input_dict, input_cash):
 def get_pets_sold(input_dict):
     return input_dict["admin"]["pets_sold"]
 
+#function to increase pets sold
+
+def increase_pets_sold(input_dict, increment):
+    new_value = 0
+
+    if increment >0:
+        new_value = get_pets_sold(input_dict) + increment
+    
+    input_dict["admin"]["pets_sold"] = new_value
+
+#function to get stock count 
+
+# def get_stock_count(input_dict):
+#     for pet in input_dict:
+#         return len(input_dict["pets"])
 
 
-    # return total_cash
-# def add_or_remove_cash(input_dict, input_int):
-#     current_value = get_total_cash(input_dict)
-#     new_value = 0
-#     if input_int >= 0:
-#          new_value = current_value + input_int
-#     else:
-#          new_value = current_value - abs(input_int) # Make input_int an absolute number.
-#     input_dict["admin"]["total_cash"] = new_value
+#function to get customer cash
+def get_customer_cash(input_list_of_dict):
+    return input_list_of_dict["cash"]
 
     
 
