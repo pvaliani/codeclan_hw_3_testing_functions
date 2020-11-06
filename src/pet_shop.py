@@ -21,8 +21,10 @@ def add_or_remove_cash(input_dict, input_cash):
     
     input_dict["admin"]["total_cash"] = new_cash
 
-#function to get pets sold
-  
+#function to retrieve pets sold
+
+def get_pets_sold(input_dict):
+    return input_dict["admin"]["pets_sold"]
 
 
 
