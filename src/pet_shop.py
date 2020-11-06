@@ -47,6 +47,16 @@ def increase_pets_sold(input_dict, increment):
 def get_customer_cash(input_list_of_dict):
     return input_list_of_dict["cash"]
 
+
+#function to remove customer cash
+
+def remove_customer_cash(input_list_of_dict, input_cash):
+
+    if input_cash >0:
+        new_cash = get_customer_cash(input_list_of_dict) - abs(input_cash)
+    
+    input_list_of_dict["cash"] = new_cash
+
     
 
 
