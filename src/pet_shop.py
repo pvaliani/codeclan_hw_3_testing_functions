@@ -106,7 +106,7 @@ def add_pet_to_customer(input_list_of_dict, customers):
     input_list_of_dict["pets"].append(customers)
 
 #function to determine if customer can afford a pet - if they can, return true.
-#if they cannot then return false
+#if they cannot then return false. Or if the price and customer cash match exactly return True.
 
 def customer_can_afford_pet(input_list_of_dict, new_pet):
     #if the value of cash in the customer list if >= the new_pet price return true
