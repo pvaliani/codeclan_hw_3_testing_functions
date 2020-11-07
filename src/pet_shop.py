@@ -40,7 +40,28 @@ def increase_pets_sold(input_dict, increment):
 
 def get_stock_count(input_dict_of_list):
     return len(input_dict_of_list["pets"])
-    
+
+#function to get pets by their breed
+
+def get_pets_by_breed(input_dict_of_list, breed):
+    results = []
+    for pet in input_dict_of_list["pets"]:
+        if pet['breed'] == breed:
+            results.append(pet)
+        elif pet['breed'] == "":
+            results.append(pet)
+    return results
+
+    # for pet in input_dict_of_list:
+    #     return input_dict_of_list(pet["breed"])
+
+
+# results = []
+#     for pet in pet_dict['pets']:
+#         if pet['breed'] == breed:
+#             results.append(pet)
+#     return results
+
 
 
 #function to get customer cash
@@ -68,13 +89,15 @@ def get_customer_pet_count(input_list_of_dict):
 
 # function to add a number of pets to a customer
 
-# def add_pet_to_customer(input_list_of_dict, pet_num):
+def add_pet_to_customer(input_list_of_dict, pet_num):
 
-#     for pet in input_list_of_dict["pets"]:
-#         if pet_num > 0:
-#             new_pets = get_customer_pet_count(input_list_of_dict) + pet_num
+    for pet in input_list_of_dict["pets"]:
+        if pet_num > 0:
+            new_pets = input_list_of_dict["pets"] + pet_num
+        elif input_list_of_dict["pets"] == []:
+            return 0
         
-#         input_list_of_dict["pets"] = new_pets
+        input_list_of_dict["pets"] = new_pets
 
     
 
