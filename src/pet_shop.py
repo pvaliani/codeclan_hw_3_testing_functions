@@ -115,6 +115,17 @@ def customer_can_afford_pet(input_list_of_dict, new_pet):
     else: 
         return False
 
+#function which determines whether to sell a pet to a customer using previously defined functions
+
+def sell_pet_to_customer(petshop_dict, input_pet, input_customer):
+    if input_pet != None:
+        if customer_can_afford_pet(input_customer, input_pet) == True:
+            remove_customer_cash(input_customer, input_pet["price"])
+            add_or_remove_cash(petshop_dict, input_pet["price"])
+            add_pet_to_customer(input_customer, input_pet)
+            remove_pet_by_name(petshop_dict, input_pet)
+            increase_pets_sold(petshop_dict, 1)
+
 
 
 
