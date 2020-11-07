@@ -52,15 +52,39 @@ def get_pets_by_breed(input_dict_of_list, breed):
             results.append(pet)
     return results
 
-    # for pet in input_dict_of_list:
-    #     return input_dict_of_list(pet["breed"])
+#function to find pets by name and return None if there is no pet
+
+def find_pet_by_name(input_dict_of_list, pet_name):
+    found_pet = None
+
+    for pet in input_dict_of_list["pets"]:
+        if pet["name"] == pet_name:
+            found_pet = pet
+            return found_pet
+        elif pet["name"] == 0:
+            return None
+
+# function to remove pet by name in the list of dictionariess
+
+def remove_pet_by_name(input_dict_of_list, pet_name):
+    for pet in input_dict_of_list["pets"]:
+        if pet["name"] == pet_name:
+            input_dict_of_list["pets"].remove(pet)
+          
 
 
-# results = []
-#     for pet in pet_dict['pets']:
-#         if pet['breed'] == breed:
-#             results.append(pet)
-#     return results
+        
+
+
+# def find_pet_by_name(shop_dict, pet_name):
+#     found_pet = None
+#     for pet in shop_dict["pets"]:
+#         if pet["name"] == pet_name:
+#             found_pet = pet
+#             return found_pet
+
+
+
 
 
 
