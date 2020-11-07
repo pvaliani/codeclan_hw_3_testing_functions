@@ -100,10 +100,21 @@ def remove_customer_cash(input_list_of_dict, input_cash):
 def get_customer_pet_count(input_list_of_dict):
     return len(input_list_of_dict["pets"])
 
-    
 
 # function to add a number of pets to a customer
 def add_pet_to_customer(input_list_of_dict, customers):
     input_list_of_dict["pets"].append(customers)
+
+#function to determine if customer can afford a pet - if they can, return true.
+#if they cannot then return false
+
+def customer_can_afford_pet(input_list_of_dict, new_pet):
+    #if the value of cash in the customer list if >= the new_pet price return true
+    if input_list_of_dict["cash"] >= new_pet["price"]:
+        return True
+    else: 
+        return False
+
+
 
 
