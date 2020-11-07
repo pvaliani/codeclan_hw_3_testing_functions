@@ -70,22 +70,15 @@ def remove_pet_by_name(input_dict_of_list, pet_name):
     for pet in input_dict_of_list["pets"]:
         if pet["name"] == pet_name:
             input_dict_of_list["pets"].remove(pet)
-          
 
+
+# function to add pet to test stock
+
+def add_pet_to_stock(input_dict_of_list, new_pet_dict):
+    updated_stock = input_dict_of_list["pets"].append(new_pet_dict)
+    return updated_stock
 
         
-
-
-# def find_pet_by_name(shop_dict, pet_name):
-#     found_pet = None
-#     for pet in shop_dict["pets"]:
-#         if pet["name"] == pet_name:
-#             found_pet = pet
-#             return found_pet
-
-
-
-
 
 
 #function to get customer cash
@@ -105,24 +98,12 @@ def remove_customer_cash(input_list_of_dict, input_cash):
 # function to retrieve customers pet count
 
 def get_customer_pet_count(input_list_of_dict):
+    return len(input_list_of_dict["pets"])
+
     
-    if input_list_of_dict["pets"] == []:
-        return 0
-    else:
-        return input_list_of_dict["pets"]
 
 # function to add a number of pets to a customer
-
-def add_pet_to_customer(input_list_of_dict, pet_num):
-
-    for pet in input_list_of_dict["pets"]:
-        if pet_num > 0:
-            new_pets = input_list_of_dict["pets"] + pet_num
-        elif input_list_of_dict["pets"] == []:
-            return 0
-        
-        input_list_of_dict["pets"] = new_pets
-
-    
+def add_pet_to_customer(input_list_of_dict, customers):
+    input_list_of_dict["pets"].append(customers)
 
 
