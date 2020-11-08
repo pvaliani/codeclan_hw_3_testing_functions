@@ -31,7 +31,7 @@ def get_pets_sold(input_dict):
 def increase_pets_sold(input_dict, increment):
     new_value = 0
 
-    if increment >0:
+    if increment>0:
         new_value = get_pets_sold(input_dict) + increment
     
     input_dict["admin"]["pets_sold"] = new_value
@@ -45,6 +45,7 @@ def get_stock_count(input_dict_of_list):
 
 #define a function which takes an input dictionary of lists and a breed of cat
 def get_pets_by_breed(input_dict_of_list, breed):
+ 
     #create an empty list to store the results of breed
     results = []
     #for each iteration in the list of the values associated with the "pets" key
@@ -63,12 +64,16 @@ def get_pets_by_breed(input_dict_of_list, breed):
 #function to find pets by name and return None if there is no pet
 
 def find_pet_by_name(input_dict_of_list, pet_name):
+    #initialise found_pet to None and then
     found_pet = None
-
+    #for each iteration in the list (which is the dictionary value of the "pet" key)
     for pet in input_dict_of_list["pets"]:
+    #if the iteration with the key "name" equals the pet_name input to the function
         if pet["name"] == pet_name:
+    #set found_pet to this particular iteration and return found_pet with the new value
             found_pet = pet
             return found_pet
+    #else if the value of the iteration through the name key equals 0 i.e there is no name, return None
         elif pet["name"] == 0:
             return None
 
