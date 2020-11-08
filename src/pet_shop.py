@@ -43,12 +43,20 @@ def get_stock_count(input_dict_of_list):
 
 #function to get pets by their breed
 
+#define a function which takes an input dictionary of lists and a breed of cat
 def get_pets_by_breed(input_dict_of_list, breed):
+    #create an empty list to store the results of breed
     results = []
+    #for each iteration in the list of the values associated with the "pets" key
     for pet in input_dict_of_list["pets"]:
+    #if the iteration pointing to 'breed' in the pet dictionaries equals the breed
+    #input in the function
         if pet['breed'] == breed:
+    #append the result to the empty results list
             results.append(pet)
+    #else if the iteration pointing to the 'breed' in the pet dictionaries is empty
         elif pet['breed'] == "":
+    #append the result to the results list - ***may be better do this as an "empty" return with a message
             results.append(pet)
     return results
 
@@ -127,5 +135,6 @@ def sell_pet_to_customer(petshop_dict, input_pet, input_customer):
             increase_pets_sold(petshop_dict, 1)
 
 
+1
 
 
